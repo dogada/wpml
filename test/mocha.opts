@@ -1,0 +1,4 @@
+--require ./test/config.js
+--reporter spec
+--ui bdd
+

@@ -1,0 +1,45 @@
+{
+  "name": "wpml",
+  "version": "0.1.0",
+  "description": "Markup Language for Web Publications",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha",
+    "clean": "rm -rf ./dist/ && mkdir ./dist/",
+    "build-debug": "browserify index.js -d -s wpml > dist/wpml.js",
+    "build-debug-map": "browserify index.js -d -s wpml | exorcist dist/wpml.js.map > dist/wpml.js",
+    "watch": "watchify index.js -d -s wpml -o dist/wpml.js -v",
+    "build-min": "browserify index.js -s wpml | uglifyjs -c > dist/wpml.min.js",
+    "build": "npm run clean && npm run build-debug && npm run build-min"
+  },
+  "keywords": [
+    "wpml",
+    "markup",
+    "coect",
+    "html",
+    "publication",
+    "markdown",
+    "language",
+    "parser"
+  ],
+  "author": "Dmytro V. Dogadailo <dogada@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "escape-html": "~1.0.2",
+    "debug": "~2.2.0",
+    "object-assign": "~3.0.0",
+    "linkify-it": "~1.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dogada/wpml.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dogada/wpml/issues"
+  },
+  "homepage": "https://github.com/dogada/wpml#readme"
+}
