@@ -6,10 +6,10 @@
   "scripts": {
     "test": "mocha",
     "clean": "rm -rf ./dist/ && mkdir ./dist/",
-    "build-debug": "browserify index.js -d -s wpml > dist/wpml.js",
-    "build-debug-map": "browserify index.js -d -s wpml | exorcist dist/wpml.js.map > dist/wpml.js",
-    "watch": "watchify index.js -d -s wpml -o dist/wpml.js -v",
-    "build-min": "browserify index.js -s wpml | uglifyjs -c > dist/wpml.min.js",
+    "build-debug": "browserify lib/index.js -d -s wpml > dist/wpml.js",
+    "build-debug-map": "browserify lib/index.js -d -s wpml | exorcist dist/wpml.js.map > dist/wpml.js",
+    "watch": "watchify lib/index.js -d -s wpml -o dist/wpml.js -v",
+    "build-min": "browserify lib/index.js -s wpml | uglifyjs -c > dist/wpml.min.js",
     "build": "npm run clean && npm run build-debug && npm run build-min"
   },
   "keywords": [
