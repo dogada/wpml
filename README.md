@@ -38,6 +38,11 @@ var _wpml = require('wpml')
 var escape = require('escape-html')
 var htmlTag = require('html-tag')
 var assign = require('object-assign')
+var apply = require('object-apply')
+
+function tag(name, attrs, value) {
+  return htmlTag(name, apply(attrs, escape), value)
+}
 
 var plugins = {
   youtube: function(data) {
