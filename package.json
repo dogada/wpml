@@ -27,7 +27,7 @@
   "dependencies": {
     "escape-html": "~1.0.2",
     "debug": "~2.2.0",
-    "object-assign": "~3.0.0",
+    "object-assign": "~4.0.1",
     "linkify-it": "~1.2.0"
   },
   "directories": {
