@@ -33,7 +33,9 @@
   "directories": {
     "test": "test"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "chai": "~3.4.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dogada/wpml.git"
