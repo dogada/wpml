@@ -1,6 +1,6 @@
 {
   "name": "wpml",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Markup Language for Web Publications",
   "main": "lib/index.js",
   "scripts": {
