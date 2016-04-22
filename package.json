@@ -10,7 +10,9 @@
     "build-debug-map": "browserify lib/index.js -d -s wpml | exorcist dist/wpml.js.map > dist/wpml.js",
     "watch": "watchify lib/index.js -d -s wpml -o dist/wpml.js -v",
     "build-min": "browserify lib/index.js -s wpml | uglifyjs -c > dist/wpml.min.js",
-    "build": "npm run clean && npm run build-debug && npm run build-min"
+    "build": "npm run clean && npm run build-debug && npm run build-min",
+    "lint": "jshint .",
+    "validate": "npm ls"
   },
   "keywords": [
     "wpml",
@@ -34,7 +36,8 @@
     "test": "test"
   },
   "devDependencies": {
-    "chai": "~3.4.1"
+    "chai": "~3.4.1",
+    "precommit-hook": "~3.0.0"
   },
   "repository": {
     "type": "git",
@@ -43,5 +46,8 @@
   "bugs": {
     "url": "https://github.com/dogada/wpml/issues"
   },
-  "homepage": "https://github.com/dogada/wpml#readme"
+  "homepage": "https://github.com/dogada/wpml#readme",
+  "pre-commit": [
+    "test"
+  ]
 }
