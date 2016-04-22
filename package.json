@@ -25,10 +25,10 @@
   "author": "Dmytro V. Dogadailo <dogada@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "escape-html": "~1.0.2",
     "debug": "~2.2.0",
-    "object-assign": "~4.0.1",
-    "linkify-it": "~1.2.0"
+    "escape-html": "~1.0.2",
+    "linkify-it": "~1.2.0",
+    "object-assign": "~4.0.1"
   },
   "directories": {
     "test": "test"
