@@ -12,8 +12,8 @@ describe('mml.security', function () {
   })
 
   it('should escape raw links', function() {
-    expect(mml.html('<a href=\"#\">xss</a>'))
-      .eql('<p>&lt;a href=&quot;#&quot;&gt;xss&lt;/a&gt;</p>')
+    expect(mml.html('<a href=\"/\">xss</a>'))
+      .eql('<p>&lt;a href=&quot;/&quot;&gt;xss&lt;/a&gt;</p>')
   })
 
   it('should escape single line <script> by default', function() {
